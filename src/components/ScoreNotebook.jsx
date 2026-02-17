@@ -47,6 +47,28 @@ export default function ScoreNotebook() {
     setPlayers(updated);
   };
 
+
+  // Reset only scores (players remain)
+   const resetScores = () => {
+   const reset = players.map(player => ({
+      ...player,
+      scores: player.scores.map(() => 0),
+      total: 0
+   }));
+   setPlayers(reset);
+   };
+
+   // Reset entire table (new game)
+   const resetTable = () => {
+   const confirmReset = window.confirm(
+      "This will remove all players and scores. Continue?"
+   );
+   if (confirmReset) {
+      setPlayers([]);
+      localStorage.removeItem("scoreNotebook");
+   }
+   };
+
   return (
     <div className="container">
       <h1>Game Score Notebook</h1>
@@ -142,6 +164,19 @@ export default function ScoreNotebook() {
           </div>
         ))}
       </div>
+
+        <div className="reset-actions">
+         <button className="reset-scores" onClick={resetScores}>
+            Reset Scores
+         </button>
+
+         <button className="reset-table" onClick={resetTable}>
+            Reset Table
+         </button>
+      </div>
+      
     </div>
+
+    
   );
 }

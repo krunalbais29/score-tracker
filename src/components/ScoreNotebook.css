@@ -275,3 +275,48 @@ td button:hover {
     scroll-snap-align: center;
   }
 }
+
+
+
+/* ===================== RESET BUTTONS ===================== */
+.reset-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.reset-scores {
+  background: linear-gradient(135deg, #facc15, #eab308);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #020617;
+}
+
+.reset-table {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #020617;
+}
+
+.reset-scores:hover {
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.8);
+}
+
+.reset-table:hover {
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.8);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .reset-actions {
+    justify-content: space-between;
+  }
+}
