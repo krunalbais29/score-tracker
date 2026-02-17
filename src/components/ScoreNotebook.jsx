@@ -165,6 +165,8 @@ export default function ScoreNotebook() {
         ))}
       </div>
 
+      <br/>
+      
         <div className="reset-actions">
          <button className="reset-scores" onClick={resetScores}>
             Reset Scores
