@@ -49,7 +49,7 @@ export default function ScoreNotebook() {
 
   return (
     <div className="container">
-      <h1>🎴 Game Score Notebook</h1>
+      <h1>Game Score Notebook</h1>
 
       {/* Controls */}
       <div className="controls">
